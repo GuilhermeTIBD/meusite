@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Amada - Wesley</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Brush+Script+MT&display=swap" rel="stylesheet">
+    <style>
+        /* Reset e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Cabeçalho Principal */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            background: url('img/WhatsApp\ Image\ 2024-11-11\ at\ 22.31.14.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            filter: brightness(0.5);
+            animation: parallax 20s infinite linear;
+        }
+
+        @keyframes parallax {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Título e Subtítulo */
+        .main-title {
+            font-size: 5rem;
+            font-family: 'Brush Script MT', cursive;
+            color: #ff1493;
+            text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: #ff66b2;
+            font-weight: bold;
+            text-shadow: 0 0 20px #ff1493, 0 0 60px #ff66b2;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 30px #ff1493, 0 0 60px #ff1493, 0 0 90px #ff1493;
+            }
+            100% {
+                text-shadow: 0 0 60px #ff1493, 0 0 120px #ff1493, 0 0 150px #ff1493;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Seção de Sobre Nós */
+        .about-section {
+            padding: 80px 10%;
+            background: #222;
+            text-align: center;
+            color: #fff;
+            font-size: 1.2rem;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #ff1493;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* Galeria de Memórias */
+        .gallery-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 10%;
+            background: #111;
+        }
+
+        .gallery-item {
+            width: 30%;
+            margin: 10px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.6);
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        /* Formulário de Amor */
+        .form-section {
+            padding: 50px 10%;
+            background: #ff1493;
+            color: #fff;
+            text-align: center;
+        }
+
+        .form-section input, .form-section textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background: #fff;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .form-section button {
+            background: #fff;
+            color: #ff1493;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-section button:hover {
+            background: #ff66b2;
+            color: #fff;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #ff1493;
+            font-style: italic;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Navegação */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #222;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff1493;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">Sobre Nós</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#form">Mensagem</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção Hero -->
+    <div class="hero-section" id="hero">
+        <div>
+            <h1 class="main-title">Para Minha Amada</h1>
+            <p class="subtitle">O Amor que Sinto por Você é Infinito</p>
+        </div>
+    </div>
+
+    <!-- Sobre Nós -->
+    <div class="about-section" id="about">
+        <h2>Sobre Nós</h2>
+        <p>Desde o momento em que nos conhecemos, minha vida nunca mais foi a mesma. Cada risada, cada olhar, e cada abraço que compartilhamos me faz sentir um amor imenso e incondicional por você. Este site é apenas uma pequena forma de mostrar o quanto você é importante para mim.</p>
+    </div>
+
+    <!-- Galeria de Memórias -->
+    <div class="gallery-section" id="gallery">
+        <div class="gallery-item">
+            <img src="img/t (1).jpeg" alt="Memória 1">
+        </div>
+        <div class="gallery-item">
+            <img src="img/t (2).jpeg" alt="Memória 2">
+        </div>
+        <div class="gallery-item">
+            <img src="img/t (3).jpeg" alt="Memória 3">
+        </div>
+    </div>
+
+    <!-- Formulário de Amor -->
+    <div class="form-section" id="form">
+        <h2>Deixe uma Mensagem</h2>
+        <input type="text" placeholder="Seu nome" required>
+        <textarea placeholder="Sua mensagem para mim" rows="4" required></textarea>
+        <button>Enviar Mensagem</button>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Com todo meu amor, Gui ❤️</p>
+    </footer>
+
+</body>
+</html>
